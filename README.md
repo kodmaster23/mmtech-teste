@@ -1,4 +1,3 @@
-
 ## Processo Seletivo - MM Tech - Proposta A
 
 ```
@@ -25,16 +24,16 @@ Alguns pontos importantes:
 
 ## Demo
 
-    Resolvi fazer em Laravel e Livewire por ser um teste com um objetivo simples.
-    Afim de utilizar o menor numero de ferramentas externas, optei pelo SQLite localmente no container.
+Resolvi fazer em Laravel e Livewire por ser um teste com um objetivo simples.
+Afim de utilizar o menor numero de ferramentas externas, optei pelo SQLite localmente no container.
 
-    Optei por usar o Model::unguard() para facilitar o processo de gravação e atualização de dados e evitar
-    o 'fillable'.
+Optei por usar o Model::unguard() para facilitar o processo de gravação e atualização de dados e evitar
+o 'fillable'.
 
-    Montei uma factory e seeder para preencher alguns registros, infelizmante o faker do Laravel não criar
-    telefones celulares com o padrão brasileiro somente. Pelo menos da pra ver a validação em andamento no edit tbm.
+Montei uma factory e seeder para preencher alguns registros, infelizmante o faker do Laravel não criar
+telefones celulares com o padrão brasileiro somente. Pelo menos da pra ver a validação em andamento no edit tbm.
 
-    Para melhor avaliação, hospeidei na minha nuvem particular usando o Coolify, baseado na configuração
+Para melhor avaliação, hospeidei na minha nuvem particular usando o Coolify, baseado na configuração
     do Nixpacks para Laravel.
 
 ### Lógica:
@@ -48,10 +47,10 @@ Alguns pontos importantes:
     
 ### Deploy
 
-    O teste tem seu deploy aqui:
-    [Demo - Coolify](https://vs408kkko004g440gkwgssgo.kodup.cloud/)
- 
-    Caso seja necessário realziar o deploy local, instruções padrão de subir Laravel.
+O teste tem seu deploy aqui:
+[Demo - Coolify](https://vs408kkko004g440gkwgssgo.kodup.cloud/)
+
+Caso seja necessário realziar o deploy local, instruções padrão de subir Laravel.
 
     ```
     composer install & 
