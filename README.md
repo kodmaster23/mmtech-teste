@@ -1,66 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Processo Seletivo - MM Tech - Proposta A
 
-## About Laravel
+```
+Aqui somos um time muito unido e integrado, gostamos de nos comunicar, porém somos esquecidos. :(
+Você pode nos ajudar criando um sisteminha que permita a armazenagem do nome, email e telefone de cada pessoa do time?
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Vai ser legal se você criar uma aplicação em Node + React/Angular, mas
+fique livre para escolher suas tecnologias. No banco, você pode usar NeDB para facilitar.
+Alguns pontos importantes:
+    ● Use sua criatividade, valorizamos muito o frontend e a experiência;
+    ● Não se esqueça das validações;
+    ● Faça um CRUD completo.
+```
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Tecnologias escolhidas
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ - Laravel
+ - Livewire
+ - Alpinejs
+ - Tailwind
+ - FeatherIcon
+ - SQLite
+ - Coolify
 
-## Learning Laravel
+## Demo
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    Resolvi fazer em Laravel e Livewire por ser um teste com um objetivo simples.
+    Afim de utilizar o menor numero de ferramentas externas, optei pelo SQLite localmente no container.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+    Optei por usar o Model::unguard() para facilitar o processo de gravação e atualização de dados e evitar
+    o 'fillable'.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    Montei uma factory e seeder para preencher alguns registros, infelizmante o faker do Laravel não criar
+    telefones celulares com o padrão brasileiro somente. Pelo menos da pra ver a validação em andamento no edit tbm.
 
-## Laravel Sponsors
+    Para melhor avaliação, hospeidei na minha nuvem particular usando o Coolify, baseado na configuração
+    do Nixpacks para Laravel.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Lógica:
+    - app\Livewire\Proposal1
+    - database\migrations
+    - database\factories
+    - database\seeders
 
-### Premium Partners
+### Telas
+    - resources\views\livewire\proposal1
+    
+### Deploy
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+    O teste tem seu deploy aqui:
+    [Demo - Coolify](https://vs408kkko004g440gkwgssgo.kodup.cloud/)
+ 
+    Caso seja necessário realziar o deploy local, instruções padrão de subir Laravel.
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```
+    composer install & 
+    php artisan migrate & 
+    npm install &
+    npm run dev &
+    php artisan serve
+  ```
